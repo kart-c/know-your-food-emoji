@@ -1,4 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 .App {
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.input {
+  display: inline-block;
+  width: 20rem;
+  padding: 0.5rem;
+  margin: 10px auto 0;
+  border-radius: 0.8rem;
+  background: rgb(247 94 21 / 30%);
+  outline: none;
+}
+
+.emoji-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.emoji-list li {
+  display: inline-block;
+  padding: 0 0.5rem;
+  font-size: 2rem;
+}
+
+.emoji-list-tag {
+  padding: 2rem;
+  font-size: 1.5rem;
 }

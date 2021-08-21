@@ -19,14 +19,17 @@ export default function App() {
   const emojis = Object.keys(foodEmojis);
   return (
     <div className="App">
-      <h1>Welcome to Know your food</h1>
+      <h1>Welcome to Know your food Emojis</h1>
 
       <div>
-        <input placeholder="Enter your favourite food emojis to see what they mean"></input>
-        <div></div>
+        <input
+          className="input"
+          placeholder="Enter your favourite food emojis"
+        ></input>
+        <div className="text-displayed"></div>
       </div>
-      <div>Emojis we Know</div>
-      <ul>
+      <div className="emoji-list-tag">Emojis we Know</div>
+      <ul className="emoji-list">
         {emojis.map((emoji) => {
           return <li key={emoji}>{emoji}</li>;
         })}

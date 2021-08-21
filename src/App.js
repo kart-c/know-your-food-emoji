@@ -2,25 +2,31 @@ import React, { useState } from "react";
 import "./styles.css";
 
 const foodEmojis = {
+  "🍄": "Mushroom",
   "🍞": "Bread",
+  "🥐": "Croissant",
+  "🥨": "Pretzel",
+  "🥓": "Bacon",
   "🍔": "Hamburger",
   "🍕": "Pizza",
   "🌭": "Hot Dog",
   "🌮": "Taco",
-  "🍚": "Cooked Rice",
-  "🍨": "Ice Cream",
-  "🥨": "Pretzel",
   "🥚": "Egg",
+  "🍚": "Cooked Rice",
+  "🍣": "Sushi",
   "🍤": "Fried Shrimp",
-  "🥓": "Bacon"
+  "🍩": "Doughnut",
+  "🥪": "Sandwich",
+  "🍡": "Dango"
 };
 
 export default function App() {
   const [text, setText] = useState("");
-  const emojis = Object.keys(foodEmojis);
+  const emojisList = Object.keys(foodEmojis);
+  console.log(emojisList.length);
 
   const emojiClickHandler = (emoji) => {
-    emojis.map((e) => {
+    emojisList.map((e) => {
       if (e === emoji) {
         setText(foodEmojis[e]);
       }
@@ -29,9 +35,11 @@ export default function App() {
 
   const inputChangeHandler = (e) => {
     const inputValue = e.target.value;
-    emojis.map((emoji) => {
+    emojisList.map((emoji) => {
       if (inputValue === emoji) {
         setText(foodEmojis[inputValue]);
+      } else {
+        setText("Sorry we do not have that emoji in out database");
       }
     });
   };
@@ -50,7 +58,7 @@ export default function App() {
       </div>
       <div className="emoji-list-tag">Emojis we Know</div>
       <ul className="emoji-list">
-        {emojis.map((emoji) => {
+        {emojisList.map((emoji) => {
           return (
             <li key={emoji} onClick={() => emojiClickHandler(emoji)}>
               {emoji}

@@ -8,6 +8,19 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+
+#root {
+  background: rgb(0, 0, 0);
+  color: white;
+  max-width: 30rem;
+  padding: 2rem;
+  margin: auto;
+  border-radius: 25px;
 }
 
 .input {
@@ -16,23 +29,33 @@ body {
   padding: 0.5rem;
   margin: 10px auto 0;
   border-radius: 0.8rem;
-  background: rgb(247 94 21 / 30%);
   outline: none;
+}
+
+.input::placeholder {
+  text-align: center;
+}
+
+.text-displayed {
+  padding-top: 2rem;
+  font-size: 1.2rem;
 }
 
 .emoji-list {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  width: 20rem;
 }
 
 .emoji-list li {
   display: inline-block;
-  padding: 0 0.5rem;
+  margin: 1rem;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .emoji-list-tag {
-  padding: 2rem;
-  font-size: 1.5rem;
+  padding: 2rem 2rem 1rem;
+  font-size: 1.8rem;
 }

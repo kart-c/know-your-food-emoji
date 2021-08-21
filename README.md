@@ -1,2 +1,2 @@
-# know-your-food-emoji
+# fun-with-flags
 Created with CodeSandbox
